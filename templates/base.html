@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% include 'components/_styles.html' %}
+
+</head>
+{% include "components/header.html" %}
+
+
+{% block content %}
+{% endblock content %}
+
+
+
+
+{% include "components/footer.html" %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+   <div class="content-container">
+    <div class="destination-details">
+        <img src="{{ destination.image.url }}" alt="{{ destination.name }}" class="destination-image">
+        <h1>{{ destination.name }}</h1>
+        <p>{{ destination.description }}</p>
+        <h2>Geografik Joylashuvi</h2>
+        <ul>
+            <li>country: {{ destination.country }}</li>
+
+        </ul>
+    </div>
+
+
+</div>
+{% endblock content %}
