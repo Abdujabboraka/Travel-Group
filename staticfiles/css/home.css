@@ -188,6 +188,88 @@
 
 
 
+/*bookign content*/
+
+.booking-container {
+
+    background-color: #fff;
+    padding: 40px;
+    margin: 100px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    text-align: left;
+}
+
+.booking-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    .booking-container {
+        width: 100%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+/*bookign content*/
+
+
+
 
 
 

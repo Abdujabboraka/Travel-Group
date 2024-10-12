@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="booking-container">
+    <h1>Booking Details</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+            {% for destination in destinations %}
+            <option value="{{ destination.id }}">{{ destination.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Destination, Review, User, Booking
 # Create your views here.
 
@@ -13,9 +13,16 @@ def homepage(request):
 
 def destination_detail(request, d_id):
     destination = Destination.objects.get(id=d_id)
-
     context = {
         'destination': destination,
         'title': f"{destination.name} Detayları"
     }
     return render(request, 'detail.html', context)
+
+def booking(request):
+    booking = Booking.objects.all()
+    destinations = Destination.objects.all()
+    context = {'bookings': booking, 'destinations': destinations}
+    if request.method == 'POST':
+        return redirect('homepage')
+    return render(request, 'booking.html', context)
