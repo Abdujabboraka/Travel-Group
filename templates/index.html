@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load elon_tags %}
 
 {% block content%}
     <div class="destinations-container">
+
+    {% all_destinations as destinations %}
     {% for d in destinations %}
 
     <div class="destination-card">

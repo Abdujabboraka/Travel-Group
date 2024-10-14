@@ -4,7 +4,7 @@ from .models import Destination, Review, User, Booking
 
 def homepage(request):
     context ={
-        'destinations': Destination.objects.all(),
+
         'users': User.objects.all(),
         'bookings': Booking.objects.all(),
         'title': "Bosh Sahifa"
